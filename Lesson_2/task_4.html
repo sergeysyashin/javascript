@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_2</title>
+</head>
+<body>
+<script>
+	
+// 4. Присвоить переменной а значение в промежутке [0..15]. 
+// С помощью оператора switch организовать вывод чисел от a до 15.
+
+//Вот как здорово, тут нам пригодилсь функция с задания 3
+
+function getRandomNumberInRange (min_value, max_value) {
+	return Math.floor(Math.random() * (max_value - min_value)) + min_value;
+}
+
+// это в одно действие делаетя с циклом, но как я понял надо извратиться именно со свитчем:)
+
+// это функция с реализацией логики задания
+
+
+function getNumbersInRange(x) {
+	switch (x) {
+		case 0: console.log (0);
+		case 1: console.log (1);
+		case 2: console.log (2);
+		case 3: console.log (3);
+		case 4: console.log (4);
+		case 5: console.log (5);
+		case 6: console.log (6);
+		case 7: console.log (7);
+		case 8: console.log (8);
+		case 9: console.log (9);
+		case 10: console.log (10);
+		case 11: console.log (11);
+		case 12: console.log (12);
+		case 13: console.log (13);
+		case 14: console.log (14);
+		case 15: console.log (15);
+	}
+}
+
+a = getRandomNumberInRange(0, 15);
+console.log(a);
+getNumbersInRange(a);
+
+
+
+</script>
+</body>
+</html>
