@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_2</title>
+</head>
+<body>
+<script>
+	
+// 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+
+function mathActions(x, y, action) {
+	switch(action) {
+		case '+': return (x + y);
+		case '-': return (x - y);
+		case '*': return (x * y);
+		case '/': return (x / y);
+	}
+}
+
+console.log(mathActions(2, 3, '+'));
+console.log(mathActions(7, 3, '-'));
+console.log(mathActions(2, 4, '*'));
+console.log(mathActions(8, 3, '/'));
+
+
+</script>
+</body>
+</html>

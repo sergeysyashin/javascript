@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_2</title>
+</head>
+<body>
+<script>
+	
+// 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+// В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+
+
+function mathActions(x, y, action) {
+	switch(action) {
+		case '+': return (x + y);
+		case '-': return (x - y);
+		case '*': return (x * y);
+		case '/': return (x / y);
+	}
+}
+
+function mathOperation(arg1, arg2, operation) {
+	switch(operation) {
+		case 'addition': return mathActions(arg1, arg2, '+');
+		case 'subtraction': return mathActions(arg1, arg2, '-');
+		case 'multiplication': return mathActions(arg1, arg2, '*');
+		case 'division': return mathActions(arg1, arg2, '/');
+	}
+}
+
+console.log(mathOperation(2, 3, 'addition'));
+console.log(mathOperation(7, 3, 'subtraction'));
+console.log(mathOperation(4, 5, 'multiplication'));
+console.log(mathOperation(12, 2, 'division'));
+
+
+</script>
+</body>
+</html>
