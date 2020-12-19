@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_2</title>
+</head>
+<body>
+<script>
+	
+// 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. Товары в корзине хранятся в массиве. Задачи:
+
+// a) Организовать такой массив для хранения товаров в корзине;
+
+// b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+
+
+const Basket = {
+
+	products: [
+		{
+			id_product: 42734,
+			name_product: 'iPhone 12 pro max 256',
+			price_product: 119000,
+			product_quantity: 2
+		},
+		{
+			id_product: 33799,
+			name_product: 'iPhone 12 pro 512',
+			price_product: 109000,
+			product_quantity: 1
+		},
+		{
+			id_product: 97283,
+			name_product: 'airpods max',
+			price_product: 63000,
+			product_quantity: 3
+		},
+		{
+			id_product: 12012,
+			name_product: 'apple watch 5',
+			price_product: 35000,
+			product_quantity: 2
+		},
+		{
+			id_product: 12220,
+			name_product: 'phone cover black',
+			price_product: 4900,
+			product_quantity: 3
+		},
+		{
+			id_product: 95642,
+			name_product: 'macbook pro 2020',
+			price_product: 249000,
+			product_quantity: 1
+		}
+	],
+
+	countBasket() {
+		let totalCost = +0;
+		for (item in Basket.products){
+			totalCost = totalCost + (this.products[item].price_product * this.products[item].product_quantity);
+		}
+		return totalCost;
+	}
+}
+
+
+console.log(`Общая сумма товаров в корзине: ${Basket.countBasket()} руб.`);
+
+
+</script>
+</body>
+</html>
