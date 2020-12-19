@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_2</title>
+</head>
+<body>
+<script>
+	
+// 7. *Сравнить null и 0. Попробуйте объяснить результат.
+
+
+console.log(null == 0); //false
+
+
+// null - это не 0. Это ничего (в то время как 0 - это всё-таки значение). null не равен нулю, он лишь равен самому себе, то есть такому же null.
+
+console.log(null == null); //true
+
+
+// null - это не пустая стрка6 это свосем ничего.
+
+console.log(null == ''); //false
+
+// в то время как 0 по сути равен пустой строке
+
+console.log(0 == ''); //true
+
+// null также не равен логическому false (потому что это 0, а null - это совсем отсутствие чего-либо)
+console.log(false == null); // false
+console.log(false == 0); //true
+
+
+
+
+</script>
+</body>
+</html>

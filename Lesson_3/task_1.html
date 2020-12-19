@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_2</title>
+</head>
+<body>
+<script>
+	
+// 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+
+let count = 2;
+let param = 2;
+
+function simpleNumbers(max_number) {
+
+nextStep:
+while (count <= max_number){
+	param = 2;
+	while (param < count) {
+		if (((count % param) == 0)) {
+			count++;
+			continue nextStep;
+		}
+		else param++;
+} 
+
+console.log(count);
+count++;
+}
+}
+
+
+simpleNumbers(100);
+
+
+</script>
+</body>
+</html>
