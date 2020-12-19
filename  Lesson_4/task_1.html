@@ -7,66 +7,36 @@
 <body>
 <script>
 	
-// 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. Товары в корзине хранятся в массиве. Задачи:
+// 1. Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, мы должны получить на выходе объект, в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 мы должны получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
 
-// a) Организовать такой массив для хранения товаров в корзине;
+// const Number = {
+// 	'единицы': '',
+// 	'десятки': '',
+// 	'сотни': ''
+// } 
 
-// b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
-
-
-const Basket = {
-
-	products: [
-		{
-			id_product: 42734,
-			name_product: 'iPhone 12 pro max 256',
-			price_product: 119000,
-			product_quantity: 2
-		},
-		{
-			id_product: 33799,
-			name_product: 'iPhone 12 pro 512',
-			price_product: 109000,
-			product_quantity: 1
-		},
-		{
-			id_product: 97283,
-			name_product: 'airpods max',
-			price_product: 63000,
-			product_quantity: 3
-		},
-		{
-			id_product: 12012,
-			name_product: 'apple watch 5',
-			price_product: 35000,
-			product_quantity: 2
-		},
-		{
-			id_product: 12220,
-			name_product: 'phone cover black',
-			price_product: 4900,
-			product_quantity: 3
-		},
-		{
-			id_product: 95642,
-			name_product: 'macbook pro 2020',
-			price_product: 249000,
-			product_quantity: 1
-		}
-	],
-
-	countBasket() {
-		let totalCost = +0;
-		for (item in Basket.products){
-			totalCost = totalCost + (this.products[item].price_product * this.products[item].product_quantity);
-		}
-		return totalCost;
+function moreThenMaxNumber(num, max_num) {
+	if (num > max_num) {
+		console.log(`число ${num} больше максимально-допустимого числа ${max_num}`);
+		return true;
 	}
 }
 
+function fromNumerToObject(num) {
+	if (moreThenMaxNumber(num, 999)) {
+		const Number = {};
+		return Number;
+	}
+	const Number = {
+	'единицы': (num%10),
+	'десятки': Math.floor((num%100)/10),
+	'сотни': Math.floor(num/100)
+	}
+	return Number;
+	}
 
-console.log(`Общая сумма товаров в корзине: ${Basket.countBasket()} руб.`);
-
+let res = fromNumerToObject(998);
+console.log(res);
 
 </script>
 </body>
